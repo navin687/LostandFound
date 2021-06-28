@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Introduction
+Lost and Found for NITC is a web application.The Lost and Found web application is to
+ensure all lost items are returned to their rightful owner in a timely and efficient manner
+Purpose
+The purpose of this SRS is show quick overview of functionalities of Lost and Found web
+application . This SRS contain user case diagram which help us to understand aspect
+of admin and user.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+ Project Scope
+The purpose of Lost and found for NITC is to ease NITC managements, NITC facul-
+ties,NITC Students to use a convenient and easy-to-use application for nding his or her
+lost belongings in time
 * ...
