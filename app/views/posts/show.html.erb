@@ -1,0 +1,39 @@
+<div>
+  <%= image_tag(@post.image, style:'width:20%') %> 
+</div>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Types:</strong>
+  <%= @post.types %>
+</p>
+
+<p>
+  <strong>Founddate:</strong>
+  <%= @post.founddate %>
+</p>
+
+<p>
+  <strong>Foundlocation:</strong>
+  <%= @post.foundlocation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user.email %>
+</p>
+<% if current_user.email == @post.user.email %>
+<%= link_to 'add more details', edit_post_path(@post) %> 
+<% end %>
+
+
+<%= link_to 'Back', posts_path %>

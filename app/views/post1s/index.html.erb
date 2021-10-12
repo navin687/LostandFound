@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lost Item Forum</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Types</th>
+      <th>User</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post1s.each do |post1| %>
+      <tr>
+        <td><%= post1.title %></td>
+        <td><%= post1.types %></td>
+        
+        <td><%= post1.user.email.split('@')[0].capitalize %></td>
+        <td><%= link_to 'more details', post1 %></td>
+        <% if current_user && current_user.admin %>
+        <td><%= link_to 'Edit', edit_post1_path(post1) %></td>
+        <td><%= link_to 'Destroy', post1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post1', new_post1_path %>
+<%= link_to 'Back', welcome_index_path %>

@@ -1,0 +1,35 @@
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @post1.title %>
+</p>
+
+<p>
+  <strong>Types:</strong>
+  <%= @post1.types %>
+</p>
+
+<p>
+  <strong>Lostdate:</strong>
+  <%= @post1.lostdate %>
+</p>
+
+<p>
+  <strong>Lastlocation:</strong>
+  <%= @post1.lastlocation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post1.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post1.user.email%>
+</p>
+<% if current_user.email == @post1.user.email %>
+<%= link_to 'add more details', edit_post1_path(@post1) %>
+<% end %> 
+<%= link_to 'Back', post1s_path %>
